@@ -1,0 +1,44 @@
+@use './typography' as *;
+@use './variables' as *;
+
+// Fonts: mobile.
+
+@mixin word-mark-mobile($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin title-mobile($font-fam: "newsreader", $font-style: normal) {
+    font-family: $font-fam;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    font-style: $font-style;
+}
+
+// Fonts: desktop and tablet.
+
+// Media queries.
+
+@mixin table {
+    @media screen and 
+        (min-width: $tablet-min-width) and 
+        (max-width: $tablet-max-width) {
+        @content;
+    }
+}
+
+@mixin table-and-desktop {
+    @media screen and (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-min-width) {
+        @content;
+    }
+}
