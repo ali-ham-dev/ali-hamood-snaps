@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Packages and scaffolding. 
+/node_modules
+vite.config.js
+*.css
