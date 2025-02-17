@@ -6,14 +6,39 @@
     @include site-left-right-padding;
     background-color: $pistachio;
 
-    &__links {
-        @include body-copy-mobile("outfit");
+    &__container {
         display: flex;
         flex-direction: column;
 
+        @include table-and-desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        @include table-and-desktop {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__links-container {
+        margin-bottom: 0.5rem;
+    }
+
+    &__link {
+        @include body-copy-mobile("outfit");
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.5rem;
 
         @include table-and-desktop {
             @include body-copy("outfit");
+            margin-bottom: 2rem;
         }
     }
 }

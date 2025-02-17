@@ -2,7 +2,7 @@ import "./Footer.css";
 import Logo from '../Logo/Logo';
 import { NavLink, Link } from 'react-router-dom';
 
-const footerLinkText = [
+const contentLinks = [
     {
         text: 'For photographers',
         link: 'for%20photographers'
@@ -15,6 +15,9 @@ const footerLinkText = [
         text: 'Inspiration',
         link: 'inspiration'
     },
+]
+
+const corpLinks = [
     {
         text: 'About',
         link: 'about'
@@ -32,20 +35,33 @@ const footerLinkText = [
 function Footer() {
     return (
         <footer className="footer">
-            < Logo />
-            <section className="footer__links">
-                {
-                    footerLinkText.map((link, index) => {
-                        return (
-                            <Link key={index} className="footer__link" to={`/${link.link}`}>{link.text}</Link>
-                            // <a key={index} className="footer__link" to={`/${link.link}`}>{link.text}</a>
-                        )
-                    })
-                }
-            </section>
-            <section className="footer__social">
+            <div className="footer__container">
+                < Logo />
+                <section className="footer__links">
+                    <div className="footer__links-container">
+                        {
+                            contentLinks.map((link, index) => {
+                                return (
+                                    <NavLink key={index} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                )
+                            })
+                        }
+                    </div>
+                    <div className="footer__links-container">
+                        {
+                            corpLinks.map((link, index) => {
+                                return (
+                                    <NavLink key={index} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                )
+                            })
+                        }
+                    </div>
+                </section>
+                <section className="footer__social">
 
-            </section>
+                </section>
+            </div>
+
             <section className="service-condition">
 
             </section>
