@@ -9,10 +9,8 @@ function Header() {
                 <NavLink className="site-logo__link" to="/">Snaps</NavLink>
             </h1>
             <button className="filter">
-                <label className="filter__text">Filter</label>
-                <div className="filter__icon-container">
-                    <img className="filter__icon" src={ FilterSvg } alt="Filter icon."></img>
-                </div>
+                <label className="filter__text">Filters</label>
+                <img className="filter__icon" src={ FilterSvg } alt="Filter icon."></img>
             </button>
         </header>
     );
