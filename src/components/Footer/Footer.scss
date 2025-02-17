@@ -1,0 +1,19 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.footer {
+    @include site-left-right-padding;
+    background-color: $pistachio;
+
+    &__links {
+        @include body-copy-mobile("outfit");
+        display: flex;
+        flex-direction: column;
+
+
+        @include table-and-desktop {
+            @include body-copy("outfit");
+        }
+    }
+}
