@@ -4,8 +4,8 @@
 
 .hero {
     background-color: $pistachio;
-    @include no-margin-padding;
-    
+    @include site-left-right-padding;
+
     &__title {
         @include no-margin-padding;
         @include body-copy-mobile("outfit-light", 300);
@@ -18,9 +18,17 @@
     &__description {
         @include no-margin-padding;
         @include title-mobile("newsreader-light");
-
+        
         @include table-and-desktop {
             @include title("newsreader-light");
+        }
+
+        @include table {
+            width: 95%;
+        }
+
+        @include desktop {
+            width: 50%;
         }
     }
 
