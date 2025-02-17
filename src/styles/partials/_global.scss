@@ -1,0 +1,15 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+body {
+    @include no-margin-padding;
+}
+
+%remove-link-formate {
+    text-decoration: none;
+    color: inherit;
+}
+
+%remove-list-style {
+    list-style: none;
+}

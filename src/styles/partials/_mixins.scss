@@ -1,0 +1,150 @@
+@use './typography.scss' as *;
+@use './variables.scss' as *;
+
+// Fonts: mobile
+
+@mixin word-mark-mobile($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin title-mobile($font-fam: "newsreader", $font-style: normal) {
+    font-family: $font-fam;
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    font-weight: 400;
+    font-style: $font-style;
+}
+
+@mixin heading-mobile($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin body-copy-mobile($font-fam: "newsreader", $font-weight: 500) {
+    font-family: $font-fam;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    font-weight: $font-weight;
+    font-style: normal;
+}
+
+@mixin small-body-copy-mobile($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 0.625rem;
+    line-height: 0.75rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin label-mobile($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 0.75rem;
+    line-height: 15px;
+    font-weight: 0.9375rem;
+    font-style: normal;
+}
+
+// Fonts: desktop and tablet
+
+@mixin word-mark($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin title($font-fam: "newsreader", $font-style: normal) {
+    font-family: $font-fam;
+    font-size: 3.25rem;
+    line-height: 4.125rem;
+    font-weight: 300;
+    font-style: $font-style;
+}
+
+@mixin heading($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin body-copy($font-fam: "newsreader", $font-weight: 500) {
+    font-family: $font-fam;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    font-weight: $font-weight;
+    font-style: normal;
+}
+
+@mixin small-body-copy($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin label($font-fam: "newsreader") {
+    font-family: $font-fam;
+    font-size: 0.875rem;
+    line-height: 1.09375rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+// Styles
+
+@mixin no-margin {
+    margin: 0rem;
+}
+
+@mixin no-padding {
+    padding: 0rem;
+}
+
+@mixin no-margin-padding {
+    @include no-margin;
+    @include no-padding;
+}
+
+@mixin site-left-right-padding {
+    padding-left: $padding-sides-mobile;
+    padding-right: $padding-sides-mobile;
+    
+    @include table-and-desktop {
+        padding-left: $padding-sides;
+        padding-right: $padding-sides;
+    }
+}
+
+
+// Media queries
+
+@mixin table {
+    @media screen and 
+        (min-width: $tablet-min-width) and 
+        (max-width: $tablet-max-width) {
+        @content;
+    }
+}
+
+@mixin table-and-desktop {
+    @media screen and (min-width: $tablet-min-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-min-width) {
+        @content;
+    }
+}
