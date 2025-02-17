@@ -3,21 +3,18 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .header {
+    @include site-left-right-padding;
     background-color: $pistachio;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: $padding-sides-mobile;
-    padding-right: $padding-sides-mobile;
     padding-top: 1.15rem;
-    // padding-bottom: 1rem;
+    padding-bottom: 0;
 
     @include table-and-desktop {
-        padding-left: $padding-sides;
-        padding-right: $padding-sides;
         padding-top: 2.25rem;
-        // padding-bottom: 2rem;
+        padding-bottom: 0;
     }
 }
 
@@ -26,10 +23,10 @@
 
     &__link {
         @extend %remove-link-formate;
-        @include title-mobile;
+        @include title-mobile("newsreader-light");
 
         @include table-and-desktop {
-            @include title;
+            @include title("newsreader-light");
         }
     }
 }

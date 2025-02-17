@@ -1,0 +1,35 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.hero {
+    background-color: $pistachio;
+    @include no-margin-padding;
+    
+    &__title {
+        @include no-margin-padding;
+        @include body-copy-mobile("outfit-light", 300);
+
+        @include table-and-desktop {
+            @include body-copy("outfit-light", 300);
+        }
+    }
+
+    &__description {
+        @include no-margin-padding;
+        @include title-mobile("newsreader-light");
+
+        @include table-and-desktop {
+            @include title("newsreader-light");
+        }
+    }
+
+    &__description--italic {
+        @include no-margin-padding;
+        @include title-mobile("newsreader-light-italic");
+
+        @include table-and-desktop {
+            @include title("newsreader-light-italic");
+        }
+    }
+}

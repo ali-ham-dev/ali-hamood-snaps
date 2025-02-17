@@ -116,6 +116,16 @@
     @include no-padding;
 }
 
+@mixin site-left-right-padding {
+    padding-left: $padding-sides-mobile;
+    padding-right: $padding-sides-mobile;
+    
+    @include table-and-desktop {
+        padding-left: $padding-sides;
+        padding-right: $padding-sides;
+    }
+}
+
 
 // Media queries
 
