@@ -21,7 +21,7 @@ const socialLinks = [
         icon:  PinterestSvg,
         link: 'https://www.pinterest.com/'
     },
-]
+];
 
 function Social() {
     return (

@@ -2,6 +2,7 @@ import "./Footer.css";
 import Logo from '../Logo/Logo';
 import { NavLink, Link } from 'react-router-dom';
 import Social from '../Social/Social';
+import ServiceTerms from '../ServiceTerms/ServiceTerms';
 
 const contentLinks = [
     {
@@ -16,7 +17,7 @@ const contentLinks = [
         text: 'Inspiration',
         link: 'inspiration'
     },
-]
+];
 
 const corpLinks = [
     {
@@ -31,7 +32,7 @@ const corpLinks = [
         text: 'Support',
         link: 'support'
     }
-]
+];
 
 function Footer() {
     return (
@@ -60,9 +61,7 @@ function Footer() {
                 </section>
                 <Social />
             </div>
-            <section className="service-condition">
-
-            </section>
+            <ServiceTerms />
         </footer>
     );
 }
