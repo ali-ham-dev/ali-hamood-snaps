@@ -3,6 +3,7 @@ import FacebookSvg from '../../assets/icons/Facebook.svg';
 import XSvg from '../../assets/icons/X_twitter.svg';
 import InstagramSvg from '../../assets/icons/Instagram.svg';
 import PinterestSvg from '../../assets/icons/Pinterest.svg';
+import { v4 as uuidv4 } from 'uuid';
 
 const socialLinks = [
     {
@@ -23,13 +24,13 @@ const socialLinks = [
     },
 ];
 
-function Social() {
+function Social({ style }) {
     return (
-        <section className="social">
+        <section className="social" style={ style }>
             {
                 socialLinks.map((linkIcon) => {
                     return (
-                        <a className="social__link" href={linkIcon.link}>
+                        <a className="social__link" href={linkIcon.link} key={uuidv4()}>
                             <img className="social__link-icon" alt={linkIcon.link} src={linkIcon.icon}/>
                         </a>
                     )

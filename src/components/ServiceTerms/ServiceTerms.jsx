@@ -1,5 +1,6 @@
 import './ServiceTerms.css';
 import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const serviceLinks = [
     {
@@ -20,13 +21,13 @@ const serviceLinks = [
     }
 ];
 
-function ServiceTerms() {
+function ServiceTerms({ style }) {
     return (
-        <section className="service-terms">
+        <section className="service-terms" style={ style }>
             {
                 serviceLinks.map((link) => {
                     return (
-                        <Link className="service-terms__link" to={`/${link.link}`}>{link.text}</Link>
+                        <Link className="service-terms__link" to={`/${link.link}`} key={uuidv4()}>{link.text}</Link>
                     )
                 })
             }

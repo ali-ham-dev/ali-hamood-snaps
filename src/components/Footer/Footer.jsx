@@ -1,8 +1,9 @@
-import "./Footer.css";
+import './Footer.css';
 import Logo from '../Logo/Logo';
 import { NavLink, Link } from 'react-router-dom';
 import Social from '../Social/Social';
 import ServiceTerms from '../ServiceTerms/ServiceTerms';
+import { v4 as uuidv4 } from 'uuid';
 
 const contentLinks = [
     {
@@ -35,16 +36,26 @@ const corpLinks = [
 ];
 
 function Footer() {
+    const logoBottomMargin = { 'margin-bottom': '1rem' };
+    const socialTopBottomMargin = { 
+        'margin-top': '0.5rem', 
+        'margin-bottom': '1rem' 
+    };
+    const serviceTopBottomMargin = {
+        'margin-top': '1rem',
+        'margin-bottom': '1rem'
+    };
+
     return (
         <footer className="footer">
             <div className="footer__container">
-                < Logo />
+                <Logo style={ logoBottomMargin }/>
                 <section className="footer__links">
                     <div className="footer__links-container">
                         {
-                            contentLinks.map((link, index) => {
+                            contentLinks.map((link) => {
                                 return (
-                                    <NavLink key={index} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                    <NavLink key={uuidv4()} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
                                 )
                             })
                         }
@@ -53,15 +64,15 @@ function Footer() {
                         {
                             corpLinks.map((link) => {
                                 return (
-                                    <NavLink className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                    <NavLink key={uuidv4()} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
                                 )
                             })
                         }
                     </div>
                 </section>
-                <Social />
+                <Social props={ socialTopBottomMargin }/>
             </div>
-            <ServiceTerms />
+            <ServiceTerms props={ serviceTopBottomMargin }/>
         </footer>
     );
 }
