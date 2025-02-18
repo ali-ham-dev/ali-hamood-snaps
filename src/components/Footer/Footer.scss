@@ -5,6 +5,7 @@
 .footer {
     @include site-left-right-padding;
     background-color: $pistachio;
+    padding-bottom: 1rem;
 
     &__container {
         display: flex;
@@ -16,9 +17,14 @@
         }
     }
 
+    &__logo {
+        margin-bottom: 1rem;
+    }
+
     &__links {
         display: flex;
         flex-direction: column;
+        padding-bottom: 1rem;
 
         @include table-and-desktop {
             flex-direction: row;
@@ -39,6 +45,23 @@
         @include table-and-desktop {
             @include body-copy("outfit");
             margin-bottom: 2rem;
+        }
+    }
+
+    &__social--desktop.social {
+        margin-bottom: 1rem;
+
+        @include mobile-and-table {
+            display: none;
+        }
+
+    }
+
+    &__social--mobile-tablet.social {
+        margin-bottom: 1rem;
+
+        @include desktop {
+            display: none;
         }
     }
 }

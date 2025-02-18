@@ -36,20 +36,14 @@ const corpLinks = [
 ];
 
 function Footer() {
-    const logoBottomMargin = { 'margin-bottom': '1rem' };
-    const socialTopBottomMargin = { 
-        'margin-top': '0.5rem', 
-        'margin-bottom': '1rem' 
-    };
-    const serviceTopBottomMargin = {
-        'margin-top': '1rem',
-        'margin-bottom': '1rem'
-    };
+    const footerLogo = 'footer__logo';
+    const footerSocialDesktop = 'footer__social--desktop';
+    const footerSocialMobileTable = 'footer__social--mobile-tablet';
 
     return (
         <footer className="footer">
             <div className="footer__container">
-                <Logo style={ logoBottomMargin }/>
+                <Logo className={ footerLogo }/>
                 <section className="footer__links">
                     <div className="footer__links-container">
                         {
@@ -70,9 +64,10 @@ function Footer() {
                         }
                     </div>
                 </section>
-                <Social props={ socialTopBottomMargin }/>
+                <Social className={ footerSocialDesktop }/>
             </div>
-            <ServiceTerms props={ serviceTopBottomMargin }/>
+            <Social className={ footerSocialMobileTable }/>
+            <ServiceTerms />
         </footer>
     );
 }

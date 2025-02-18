@@ -24,9 +24,11 @@ const socialLinks = [
     },
 ];
 
-function Social({ style }) {
+function Social(props) {
+    const propClassName = props.className ? props.className : '';
+
     return (
-        <section className="social" style={ style }>
+        <section className={`social ${propClassName}`}>
             {
                 socialLinks.map((linkIcon) => {
                     return (

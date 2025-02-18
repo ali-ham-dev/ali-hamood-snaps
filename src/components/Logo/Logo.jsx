@@ -1,9 +1,11 @@
 import './Logo.css';
 import { NavLink } from 'react-router-dom';
 
-function Logo({ style }) {
+function Logo(props) {
+    const propClassName = props.className ? props.className : '';
+
     return (
-        <h2 className="site-logo" style={ style }>
+        <h2 className={`site-logo ${propClassName}`}>
             <NavLink className="site-logo__link" to="/">Snaps</NavLink>
         </h2>
     );

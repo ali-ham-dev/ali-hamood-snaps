@@ -21,9 +21,9 @@ const serviceLinks = [
     }
 ];
 
-function ServiceTerms({ style }) {
+function ServiceTerms() {
     return (
-        <section className="service-terms" style={ style }>
+        <section className="service-terms">
             {
                 serviceLinks.map((link) => {
                     return (
