@@ -1,6 +1,7 @@
 import "./Footer.css";
 import Logo from '../Logo/Logo';
 import { NavLink, Link } from 'react-router-dom';
+import Social from '../Social/Social';
 
 const contentLinks = [
     {
@@ -49,19 +50,16 @@ function Footer() {
                     </div>
                     <div className="footer__links-container">
                         {
-                            corpLinks.map((link, index) => {
+                            corpLinks.map((link) => {
                                 return (
-                                    <NavLink key={index} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                    <NavLink className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
                                 )
                             })
                         }
                     </div>
                 </section>
-                <section className="footer__social">
-
-                </section>
+                <Social />
             </div>
-
             <section className="service-condition">
 
             </section>
