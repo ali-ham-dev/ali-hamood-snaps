@@ -1,10 +1,21 @@
 import './ImageCard.css';
+import Tag from '../tag/Tag.jsx';
+import tags from '../../data/tags.json';
+import photos from '../../data/photos.json';
 
 function ImageCard() {  
+    // tags.forEach(tag => { console.log(tag); });
+
     return (
         <div className="image-card">
-            <img src="https://via.placeholder.com/150" alt="placeholder" />
-            <p>Image Title</p>
+            <div className="image-card__image-container">
+                {/* <img src="" alt="" className="image-card__image" /> */}
+                <div className="image-card__image-author"></div>
+            </div>
+            <div className="image-card__tags">
+                <Tag text={'Canada'} />
+                <Tag text={'BC'} clickable={true} />
+            </div>
         </div>
     );
 }
