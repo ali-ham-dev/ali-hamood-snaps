@@ -129,6 +129,12 @@
 
 // Media queries
 
+@mixin mobile-and-table {
+    @media screen and (max-width: $tablet-max-width) {
+        @content;
+    }
+}
+
 @mixin table {
     @media screen and 
         (min-width: $tablet-min-width) and 

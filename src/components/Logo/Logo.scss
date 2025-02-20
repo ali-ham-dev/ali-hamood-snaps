@@ -6,7 +6,6 @@
     @include no-margin-padding;
 
     &__link {
-        @extend %remove-link-formate;
         @include title-mobile("newsreader-light");
 
         @include table-and-desktop {
