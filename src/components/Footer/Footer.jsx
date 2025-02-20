@@ -63,8 +63,8 @@ function Footer() {
                             })
                         }
                     </div>
+                    <Social className={ footerSocialDesktop }/>
                 </section>
-                <Social className={ footerSocialDesktop }/>
             </div>
             <Social className={ footerSocialMobileTable }/>
             <ServiceTerms />

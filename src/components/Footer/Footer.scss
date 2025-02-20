@@ -5,7 +5,7 @@
 .footer {
     @include site-left-right-padding;
     background-color: $pistachio;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 
     &__container {
         display: flex;
@@ -27,7 +27,7 @@
         flex-direction: column;
         padding-bottom: 1rem;
         width: 40%;
-        max-width: 20rem;
+        max-width: 35rem;
 
         @include table-and-desktop {
             flex-direction: row;
