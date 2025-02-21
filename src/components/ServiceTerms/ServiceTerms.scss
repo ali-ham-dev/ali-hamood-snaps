@@ -1,0 +1,17 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.service-terms {
+    @include small-body-copy-mobile("outfit");
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 14rem;
+    color: $black;
+    opacity: 0.5; 
+
+    @include table-and-desktop {
+        @include small-body-copy("outfit");
+    }
+}

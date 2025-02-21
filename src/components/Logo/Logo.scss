@@ -1,0 +1,15 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.site-logo {
+    @include no-margin-padding;
+
+    &__link {
+        @include title-mobile("newsreader-light");
+
+        @include table-and-desktop {
+            @include title("newsreader-light");
+        }
+    }
+}

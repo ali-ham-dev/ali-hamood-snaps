@@ -1,0 +1,52 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.hero {
+    background-color: $pistachio;
+    @include site-left-right-padding;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include table-and-desktop {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    &__title {
+        @include body-copy-mobile("outfit-light", 300);
+        display: flex;
+        margin-bottom: 1rem;
+
+        @include table-and-desktop {
+            @include body-copy("outfit-light", 300);
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__description {
+        @include no-margin-padding;
+        @include title-mobile("newsreader-light");
+        
+        @include table-and-desktop {
+            @include title("newsreader-light");
+        }
+
+        @include table {
+            width: 95%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    &__description--italic {
+        @include no-margin-padding;
+        @include title-mobile("newsreader-light-italic");
+
+        @include table-and-desktop {
+            @include title("newsreader-light-italic");
+        }
+    }
+}
