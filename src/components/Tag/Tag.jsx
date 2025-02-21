@@ -6,12 +6,7 @@ function Tag(props) {
     const marginBottom = props.marginBottom ? 'tag--margin-bottom' : '';
 
     return (
-        <button className={`
-            tag 
-            ${ clickableClass } 
-            ${ marginRight } 
-            ${ marginBottom }
-            `}>{ props.text }</button>
+        <button className={`tag ${ clickableClass } ${ marginRight } ${ marginBottom }`}>{ props.text }</button>
     );
 }
 

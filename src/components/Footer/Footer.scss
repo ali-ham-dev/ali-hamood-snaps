@@ -13,6 +13,7 @@
         align-items: start;
 
         @include table-and-desktop {
+            padding-top: 4rem;
             flex-direction: row;
             justify-content: space-between;
         }

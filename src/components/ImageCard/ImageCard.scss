@@ -16,6 +16,8 @@
 
     @include desktop {
         max-width: 31.3333%;
+        // max-width: 48%;
+        // min-width: 23.5rem;
     }
 
     @include table-and-desktop {

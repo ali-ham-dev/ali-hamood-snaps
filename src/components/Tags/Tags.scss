@@ -7,10 +7,17 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 
+    @include table {
+        padding-bottom: 4rem;
+    }
+
 
     @include table-and-desktop {
         padding-top: 2rem;
-        padding-bottom: 4rem;
+    }
+
+    @include desktop {
+        min-width: 22%;
     }
 
     &__title {
