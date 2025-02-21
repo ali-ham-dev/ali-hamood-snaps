@@ -154,3 +154,9 @@
         @content;
     }
 }
+
+@mixin mouse-hover {
+    &:hover {
+        @content;
+    }
+}
