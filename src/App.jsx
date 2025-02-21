@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import Gallery from './components/Gallery/Gallery';
+import Home from './components/Home/Home';
 
 function App() {
 
@@ -11,10 +12,8 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <Hero />
-        <Gallery />
         <Routes>
-          {/* <Route path='/' element={<Home />} /> */}
+          <Route path='/' element={ <Home /> } />
           {/* <Route path='*' element={<Home />} /> */}
         </Routes>
         <Footer />

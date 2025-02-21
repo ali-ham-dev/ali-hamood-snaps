@@ -1,5 +1,5 @@
 import './ImageCard.css';
-import Tag from '../tag/Tag.jsx';
+import Tag from '../Tag/Tag.jsx';
 import { v4 as uuidV4 }from 'uuid';
 
 function ImageCard(props) {  
