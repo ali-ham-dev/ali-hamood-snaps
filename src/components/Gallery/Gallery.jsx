@@ -1,18 +1,20 @@
 import './Gallery.css';
 import ImageCard from '../ImageCard/ImageCard.jsx';
+import images from '../../data/photos.json'
 
 function Gallery() {
-    const imageSrc = 'https://unit-3-project-c5faaab51857.herokuapp.com/photos/Photo-00.png';
-    const imageAltText = 'Looking up to the Manhattan Bridge, in New York City, New York.';
-    const author = 'Greg Hooper';
-    const tags = ['New York', 'Bridge', 'Skyline', 'Cars', 'Bridge'];
-
     return (
         <section className="gallery">
-            <ImageCard imageSrc={imageSrc} 
-                imageAltText={imageAltText}
-                author={author}
-                tags={tags}/>
+            {
+                images.map((image) => {
+                    return (
+                        <ImageCard imageSrc={image.photo} 
+                        imageAltText={image.photoDescription}
+                        author={image.photographer}
+                        tags={image.tags}/>
+                    );
+                })
+            }
         </section>
     );
 }
