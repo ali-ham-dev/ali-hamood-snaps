@@ -5,8 +5,18 @@
     border: 1px solid $sea-green;
     border-radius: 0.5rem;
     overflow: hidden;
-    width: 50rem;
+    width: auto;
     height: auto;
+    max-width: 100%;
+    margin-bottom: 2rem;
+
+    @include table {
+        max-width: 48%
+    }
+
+    @include desktop {
+        max-width: 31.3333%;
+    }
 
     @include table-and-desktop {
         border-radius: 0.75rem;

@@ -15,7 +15,7 @@ function ImageCard(props) {
                 <span className="image-card__image-author">{author}</span>
             </div>
             <div className="image-card__tags">
-                { tags.map((tag, index) =>  <Tag text={tag} marginRight={(index === tags.length - 1) ? true : false}/>) }
+                { tags.map((tag, index) =>  <Tag text={tag} marginRight={(index === tags.length - 1) ? false : true}/>) }
             </div>
         </div>
     );
