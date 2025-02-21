@@ -1,5 +1,6 @@
 import './ImageCard.css';
 import Tag from '../tag/Tag.jsx';
+import { v4 as uuidV4 }from 'uuid';
 
 function ImageCard(props) {  
     const imageSrc = props.imageSrc ?? '';
@@ -14,7 +15,9 @@ function ImageCard(props) {
                 <span className="image-card__image-author">{author}</span>
             </div>
             <div className="image-card__tags">
-                { tags.map((tag, index) =>  <Tag text={tag} marginRight={(index === tags.length - 1) ? false : true}/>) }
+                { tags.map((tag, index) =>  <Tag text={tag} 
+                    marginRight={(index === tags.length - 1) ? false : true}
+                    key={ uuidV4() }/>) }
             </div>
         </div>
     );
