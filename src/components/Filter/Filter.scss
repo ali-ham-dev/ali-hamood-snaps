@@ -5,8 +5,8 @@
 .filter {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    justify-content: center;
     padding: 0.5rem 1rem;
     border-radius: 10rem;
     background-color: $pistachio;
@@ -20,11 +20,16 @@
     }
 
     &__text {
-        @include body-copy-mobile("outfit-light");
+        @include body-copy-mobile("outfit");
         margin-right: 0.5rem;
 
         @include table-and-desktop {
-            @include body-copy("outfit-light");
+            @include label("outfit");
         }
+    }
+
+    @include mouse-hover {
+        color: white;
+        background-color: $forest-green;
     }
 }

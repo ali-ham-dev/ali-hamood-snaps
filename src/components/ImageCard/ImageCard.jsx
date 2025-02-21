@@ -6,7 +6,6 @@ function ImageCard(props) {
     const imageAltText = props.imageAltText ?? '';
     const author = props.author ?? 'Unknown';
     const tags = props.tags ?? [];
-    console.log('Got called once');
 
     return (
         <div className="image-card">
