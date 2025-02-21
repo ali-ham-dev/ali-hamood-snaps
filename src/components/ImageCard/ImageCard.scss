@@ -1,0 +1,25 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.image-card {
+    &__image-container {
+
+    }
+
+    &__image {
+
+    }
+
+    &__image-author {
+
+    }
+
+    &__tags {
+        background-color: $sage;
+        padding: 0.5rem;
+
+        @include table-and-desktop {
+            padding: 1rem;
+        }
+    }
+}

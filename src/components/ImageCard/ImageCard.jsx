@@ -9,11 +9,11 @@ function ImageCard() {
     return (
         <div className="image-card">
             <div className="image-card__image-container">
-                {/* <img src="" alt="" className="image-card__image" /> */}
+                <img src="" alt="" className="image-card__image" />
                 <div className="image-card__image-author"></div>
             </div>
             <div className="image-card__tags">
-                <Tag text={'Canada'} />
+                <Tag text={'Canada'} marginRight={true}/>
                 <Tag text={'BC'} clickable={true} />
             </div>
         </div>
