@@ -1,6 +1,7 @@
 import tags from '../../data/tags.json';
 import './Tags.css';
 import Tag from '../Tag/Tag';
+import { v4 as uuidv4 } from 'uuid';
 
 function Tags() {
 
@@ -14,7 +15,8 @@ function Tags() {
                             text={ tag } 
                             clickable={ true } 
                             marginRight={ true }
-                            marginBottom={ true }/>);
+                            marginBottom={ true }
+                            key={ uuidv4() }/>);
                     })
                 }
             </div>
