@@ -18,6 +18,12 @@
         max-width: 31.3333%;
     }
 
+    &--filter-displayed {
+        @include desktop {
+            max-width: 48%;
+        }
+    }
+
     @include table-and-desktop {
         border-radius: 0.75rem;
     }

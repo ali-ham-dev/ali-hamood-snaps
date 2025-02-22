@@ -13,8 +13,10 @@
         align-items: start;
 
         @include table-and-desktop {
+            padding-top: 4rem;
             flex-direction: row;
             justify-content: space-between;
+            height: 20rem;
         }
     }
 
@@ -27,11 +29,12 @@
         flex-direction: column;
         padding-bottom: 1rem;
         width: 40%;
-        max-width: 35rem;
+        max-width: 40rem;
 
         @include table-and-desktop {
             flex-direction: row;
             justify-content: space-between;
+            align-items: first baseline;
         }
     }
 
@@ -47,7 +50,7 @@
 
         @include table-and-desktop {
             @include body-copy("outfit");
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
     }
 

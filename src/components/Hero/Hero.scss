@@ -39,14 +39,20 @@
         @include desktop {
             width: 50%;
         }
-    }
 
-    &__description--italic {
-        @include no-margin-padding;
-        @include title-mobile("newsreader-light-italic");
+        &--filter-displayed {
+            @include desktop {
+                width: 60%;
+            }
+        }
 
-        @include table-and-desktop {
-            @include title("newsreader-light-italic");
+        &--italic {
+            @include no-margin-padding;
+            @include title-mobile("newsreader-light-italic");
+    
+            @include table-and-desktop {
+                @include title("newsreader-light-italic");
+            }
         }
     }
 }
