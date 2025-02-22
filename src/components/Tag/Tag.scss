@@ -29,6 +29,11 @@
         }
     }
 
+    &--clickable-clicked {
+        background-color: $forest-green;
+        color: $white;
+    }
+
     &--margin-right {
         margin-right: 0.5rem;
     }
