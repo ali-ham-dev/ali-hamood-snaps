@@ -4,16 +4,13 @@ import Hero from '../Hero/Hero';
 import Gallery from '../Gallery/Gallery';
 import Tags from '../Tags/Tags';
 
-
-function Home() {
-    const [tagsDisplayed, setTagsDisplayed] = useState();
-
+function Home({filterDisplayed}) {
     return (
         <main className="home">
-            <Tags />
+            <Tags filterDisplayed={filterDisplayed}/>
             <div className="home__container">
-                <Hero />
-                <Gallery />
+                <Hero filterDisplayed={filterDisplayed}/>
+                <Gallery filterDisplayed={filterDisplayed}/>
             </div>
         </main>
     );

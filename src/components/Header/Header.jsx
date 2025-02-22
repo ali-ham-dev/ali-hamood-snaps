@@ -3,11 +3,11 @@ import Filter from '../Filter/Filter';
 import Logo from '../Logo/Logo';
 import './Header.css';
 
-function Header() {
+function Header({filterDisplayed, updateFilterDisplayed}) {
     return (
         <header className="header">
             <Logo />
-            <Filter />
+            <Filter filterDisplayed={filterDisplayed} updateFilterDisplayed={updateFilterDisplayed}/>
         </header>
     );
 }

@@ -3,10 +3,9 @@ import './Tags.css';
 import Tag from '../Tag/Tag';
 import { v4 as uuidv4 } from 'uuid';
 
-function Tags() {
-
+function Tags({filterDisplayed}) {
     return (
-        <section className="tags">
+        <section className={`tags ${filterDisplayed?'':'tags--display'}`}>
             <h2 className="tags__title">Filters</h2>
             <div className="tags__tags">
                 {

@@ -9,7 +9,7 @@ function ImageCard(props) {
     const tags = props.tags ?? [];
 
     return (
-        <div className="image-card">
+        <div className={`image-card ${props.filterDisplayed?'image-card--filter-displayed':''}`}>
             <div className="image-card__image-container">
                 <img src={imageSrc} alt={imageAltText} className="image-card__image" />
                 <span className="image-card__image-author">{author}</span>

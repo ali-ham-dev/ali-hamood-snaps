@@ -20,6 +20,10 @@
         min-width: 20%;
     }
 
+    &--display {
+        display: none;
+    }
+
     &__title {
         @include heading-mobile("outfit");
         @include no-margin-padding;

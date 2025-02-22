@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import ImageCard from '../ImageCard/ImageCard.jsx';
 import images from '../../data/photos.json'
 
-function Gallery() {
+function Gallery({filterDisplayed}) {
     return (
         <section className="gallery">
             {
@@ -13,7 +13,8 @@ function Gallery() {
                         imageAltText={image.photoDescription}
                         author={image.photographer}
                         tags={image.tags}
-                        key={ uuidv4() }/>
+                        key={ uuidv4() }
+                        filterDisplayed={filterDisplayed}/>
                     );
                 })
             }
