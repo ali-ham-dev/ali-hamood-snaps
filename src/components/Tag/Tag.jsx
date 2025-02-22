@@ -7,11 +7,12 @@ function Tag(props) {
     const marginBottom = props.marginBottom ? 'tag--margin-bottom' : '';
 
     const [clicked, setClicked] = useState(false);
-    const handelTagClick = ()=>{
+    const handelTagClick = (event)=>{
         if (!clickableClass)
             return;
 
         setClicked(!clicked);
+        props.updateFilterTags(event.target.innerText);
     }
 
     return (
