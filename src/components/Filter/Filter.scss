@@ -28,8 +28,8 @@
         }
     }
 
-    @include mouse-hover {
-        color: white;
+    &--hover {
+        color: $white;
         background-color: $forest-green;
     }
 }
