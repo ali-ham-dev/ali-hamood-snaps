@@ -15,7 +15,7 @@ function Tags({filterDisplayed, updateFilterTags}) {
                             clickable={ true } 
                             marginRight={ true }
                             marginBottom={ true }
-                            key={ uuidv4() }
+                            key={ tag }
                             updateFilterTags={ updateFilterTags }/>);
                     })
                 }

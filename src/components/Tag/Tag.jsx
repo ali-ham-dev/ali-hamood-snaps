@@ -1,5 +1,5 @@
 import './Tag.css';
-import {useState} from 'react';
+import { useState, useEffect} from 'react';
 
 function Tag(props) {
     const clickableClass = props.clickable ? 'tag--clickable' : '';
@@ -8,7 +8,7 @@ function Tag(props) {
 
     const [clicked, setClicked] = useState(false);
     const handelTagClick = (event)=>{
-        if (!clickableClass)
+        if (!clickableClass && !props.updateFilterTags)
             return;
 
         setClicked(!clicked);
