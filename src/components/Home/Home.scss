@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        flex-direction: row-reverse;
+    }
+}

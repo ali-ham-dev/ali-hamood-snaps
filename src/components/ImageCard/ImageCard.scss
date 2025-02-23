@@ -1,0 +1,69 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.image-card {
+    border: 1px solid $sea-green;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 2rem;
+
+    @include table {
+        max-width: 48%
+    }
+
+    @include desktop {
+        max-width: 31.3333%;
+    }
+
+    &--filter-displayed {
+        @include desktop {
+            max-width: 48%;
+        }
+    }
+
+    @include table-and-desktop {
+        border-radius: 0.75rem;
+    }
+
+    &__image-container {
+        position: relative;
+        background-color: red;
+        box-sizing: content-box;
+        
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__image-author {
+        @include label-mobile(outfit);
+        background-color: $sage;
+        padding: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        position: absolute;
+        z-index: 1;
+        bottom: 0.0625rem;
+        right: 0;
+
+        @include table-and-desktop {
+            @include label(outfit);
+            padding: 1rem;
+            border-top-left-radius: 0.75rem;
+        }
+    }
+
+    &__tags {
+        background-color: $sage;
+        padding: 0.5rem;
+
+        @include table-and-desktop {
+            padding: 1rem;
+        }
+    }
+}

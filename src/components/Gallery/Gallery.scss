@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.gallery {
+    @include site-left-right-padding;
+    background-color: $pistachio;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+    @include table {
+        padding-bottom: 4rem;
+    }
+
+    @include desktop {
+        padding-bottom: 1rem;
+    }
+}
