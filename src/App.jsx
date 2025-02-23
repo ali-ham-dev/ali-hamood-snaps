@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
-import Gallery from './components/Gallery/Gallery';
 import Home from './components/Home/Home';
 
 function App() {

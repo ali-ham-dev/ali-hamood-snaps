@@ -3,7 +3,7 @@ import './Tags.css';
 import Tag from '../Tag/Tag';
 import { v4 as uuidv4 } from 'uuid';
 
-function Tags({filterDisplayed}) {
+function Tags({filterDisplayed, updateFilterTags}) {
     return (
         <section className={`tags ${filterDisplayed?'':'tags--display'}`}>
             <h2 className="tags__title">Filters</h2>
@@ -15,7 +15,8 @@ function Tags({filterDisplayed}) {
                             clickable={ true } 
                             marginRight={ true }
                             marginBottom={ true }
-                            key={ uuidv4() }/>);
+                            key={ tag }
+                            updateFilterTags={ updateFilterTags }/>);
                     })
                 }
             </div>
