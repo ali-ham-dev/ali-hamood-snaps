@@ -1,4 +1,4 @@
-import './Social.css';
+import './Social.scss';
 import FacebookSvg from '../../assets/icons/Facebook.svg';
 import XSvg from '../../assets/icons/X_twitter.svg';
 import InstagramSvg from '../../assets/icons/Instagram.svg';

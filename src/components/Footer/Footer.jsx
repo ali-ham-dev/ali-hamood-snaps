@@ -1,4 +1,4 @@
-import './Footer.css';
+import './Footer.scss';
 import Logo from '../Logo/Logo';
 import { NavLink, Link } from 'react-router-dom';
 import Social from '../Social/Social';

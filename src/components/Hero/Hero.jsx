@@ -1,4 +1,4 @@
-import './Hero.css';
+import './Hero.scss';
 import React from 'react';
 
 function Hero({filterDisplayed}) {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Filter.css';
+import './Filter.scss';
 import FilterSvg from '../../assets/icons/Filter.svg';
 import FilterSvgHover from '../../assets/icons/FilterHover.svg';
 import React from 'react';
