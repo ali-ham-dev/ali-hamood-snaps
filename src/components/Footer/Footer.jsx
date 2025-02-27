@@ -1,9 +1,10 @@
-import './Footer.css';
+import './Footer.scss';
 import Logo from '../Logo/Logo';
 import { NavLink, Link } from 'react-router-dom';
 import Social from '../Social/Social';
 import ServiceTerms from '../ServiceTerms/ServiceTerms';
 import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
 
 const contentLinks = [
     {

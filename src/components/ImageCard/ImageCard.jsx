@@ -1,6 +1,7 @@
-import './ImageCard.css';
+import './ImageCard.scss';
 import Tag from '../Tag/Tag.jsx';
 import { v4 as uuidV4 }from 'uuid';
+import React from 'react';
 
 function ImageCard(props) {  
     const imageSrc = props.imageSrc ?? '';

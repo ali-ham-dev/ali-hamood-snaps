@@ -1,7 +1,8 @@
-import './Gallery.css';
+import './Gallery.scss';
 import { v4 as uuidv4 } from 'uuid';
 import ImageCard from '../ImageCard/ImageCard.jsx';
-import images from '../../data/photos.json'
+import images from '../../data/photos.json';
+import React from 'react';
 
 function Gallery({filterDisplayed, filterTags}) {
     return (

@@ -1,9 +1,10 @@
-import './Social.css';
+import './Social.scss';
 import FacebookSvg from '../../assets/icons/Facebook.svg';
 import XSvg from '../../assets/icons/X_twitter.svg';
 import InstagramSvg from '../../assets/icons/Instagram.svg';
 import PinterestSvg from '../../assets/icons/Pinterest.svg';
 import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
 
 const socialLinks = [
     {

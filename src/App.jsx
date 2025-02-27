@@ -1,10 +1,11 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
+import React from 'react';
 
 function App() {
   const [filterDisplayed, setFilterDisplayed] = useState(false);

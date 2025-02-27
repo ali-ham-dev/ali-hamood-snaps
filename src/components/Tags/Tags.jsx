@@ -1,7 +1,8 @@
 import tags from '../../data/tags.json';
-import './Tags.css';
+import './Tags.scss';
 import Tag from '../Tag/Tag';
 import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
 
 function Tags({filterDisplayed, updateFilterTags}) {
     return (
