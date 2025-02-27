@@ -1,4 +1,5 @@
 import './Hero.css';
+import React from 'react';
 
 function Hero({filterDisplayed}) {
     return (

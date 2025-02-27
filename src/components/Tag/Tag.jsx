@@ -1,5 +1,6 @@
 import './Tag.css';
 import { useState, useEffect} from 'react';
+import React from 'react';
 
 function Tag(props) {
     const clickableClass = props.clickable ? 'tag--clickable' : '';

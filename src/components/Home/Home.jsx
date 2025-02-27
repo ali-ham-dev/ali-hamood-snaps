@@ -3,6 +3,7 @@ import './Home.css';
 import Hero from '../Hero/Hero';
 import Gallery from '../Gallery/Gallery';
 import Tags from '../Tags/Tags';
+import React from 'react';
 
 function Home({filterDisplayed}) {
     const [filterTags, setFilterTags] = useState([]);

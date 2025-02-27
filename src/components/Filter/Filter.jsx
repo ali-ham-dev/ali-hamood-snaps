@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Filter.css';
 import FilterSvg from '../../assets/icons/Filter.svg';
 import FilterSvgHover from '../../assets/icons/FilterHover.svg';
+import React from 'react';
 
 function Filter({filterDisplayed, updateFilterDisplayed}) {
     const [filterIcon, setFilterIcon] = useState(FilterSvg);
