@@ -1,0 +1,35 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.four-zero-four {
+    @include site-left-right-padding;
+    background-color: $pistachio;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include table-and-desktop {
+
+    }
+    &__container {
+        width: 50%;
+    }
+
+    &__title {
+        @include title-mobile("outfit");
+
+        @include table-and-desktop {
+            @include title("outfit");
+        }
+    }
+
+    &__description {
+        @include heading-mobile("outfit");
+
+        @include table-and-desktop {
+            @include heading("outfit");
+        }
+    }
+}

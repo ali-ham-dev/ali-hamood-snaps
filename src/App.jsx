@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import ImagePage from './pages/ImagePage/ImagePage';
+import FourZeroFour from './pages/FourZeroFour/FourZeroFour';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home filterDisplayed={filterDisplayed}/> } />
           <Route path='/imagePage/:imageId' element={ <ImagePage /> } />
-          <Route path='*'element={ <div>404</div> } />
+          <Route path='*'element={ <FourZeroFour /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
