@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './Home.scss';
-import Hero from '../Hero/Hero';
-import Gallery from '../Gallery/Gallery';
-import Tags from '../Tags/Tags';
+import Hero from '../../components/Hero/Hero';
+import Gallery from '../../components/Gallery/Gallery';
+import Tags from '../../components/Tags/Tags';
 import React from 'react';
 
 function Home({filterDisplayed}) {

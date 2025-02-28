@@ -2,9 +2,8 @@ import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
+import Home from './pages/Home/Home';
 import React from 'react';
 
 function App() {
