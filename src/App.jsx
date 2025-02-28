@@ -18,7 +18,8 @@ function App() {
         <Header filterDisplayed={filterDisplayed} updateFilterDisplayed={updateFilterDisplayed}/>
         <Routes>
           <Route path='/' element={ <Home filterDisplayed={filterDisplayed}/> } />
-          {/* <Route path='*' element={<Home />} /> */}
+          <Route path='/imagePage/:imageId' element={ <div>Image Page</div> } />
+          <Route path='*'element={ <div>404</div> } />
         </Routes>
         <Footer />
       </BrowserRouter>
