@@ -32,4 +32,8 @@
         color: $white;
         background-color: $forest-green;
     }
+
+    &--hide {
+        display: none;
+    }
 }

@@ -4,7 +4,7 @@ import FilterSvg from '../../assets/icons/Filter.svg';
 import FilterSvgHover from '../../assets/icons/FilterHover.svg';
 import React from 'react';
 
-function Filter({filterDisplayed, updateFilterDisplayed}) {
+function Filter({filterDisplayed, updateFilterDisplayed, onHomePage}) {
     const [filterIcon, setFilterIcon] = useState(FilterSvg);
     const [filterHover, setFilterHover] = useState(false);
     
@@ -27,7 +27,8 @@ function Filter({filterDisplayed, updateFilterDisplayed}) {
     }
 
     return (
-        <button className={ `filter ${filterHover ? "filter--hover" : ""}` }
+        <button className={ `filter ${filterHover ? "filter--hover" : ""}
+                ${onHomePage ? "" : "filter--hide"}` }
             onMouseEnter={ filterMouseEnter }
             onMouseLeave={ filterMouseLeave }
             onClick={ filterClick }>
