@@ -2,8 +2,8 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .image-page {
-    @include site-left-right-padding;
     background-color: $pistachio;
     box-sizing: border-box;
     overflow: hidden;
+    @include site-left-right-padding;
 }

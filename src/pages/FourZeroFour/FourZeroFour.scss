@@ -2,17 +2,14 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .four-zero-four {
-    @include site-left-right-padding;
     background-color: $pistachio;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include site-left-right-padding;
 
-    @include table-and-desktop {
-
-    }
     &__container {
         width: 50%;
     }

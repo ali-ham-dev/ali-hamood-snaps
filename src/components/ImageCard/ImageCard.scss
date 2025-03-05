@@ -42,7 +42,6 @@
     }
 
     &__image-author {
-        @include label-mobile(outfit);
         background-color: $sage;
         padding: 0.5rem;
         border-top-left-radius: 0.5rem;
@@ -50,11 +49,12 @@
         z-index: 1;
         bottom: 0.0625rem;
         right: 0;
+        @include label-mobile(outfit);
 
         @include table-and-desktop {
-            @include label(outfit);
             padding: 1rem;
             border-top-left-radius: 0.75rem;
+            @include label(outfit);
         }
     }
 
