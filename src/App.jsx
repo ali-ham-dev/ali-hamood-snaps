@@ -1,10 +1,12 @@
 import './App.scss';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Home from './pages/Home/Home';
 import React from 'react';
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import ImagePage from './pages/ImagePage/ImagePage';
+import FourZeroFour from './pages/FourZeroFour/FourZeroFour';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [filterDisplayed, setFilterDisplayed] = useState(false);
@@ -18,7 +20,8 @@ function App() {
         <Header filterDisplayed={filterDisplayed} updateFilterDisplayed={updateFilterDisplayed}/>
         <Routes>
           <Route path='/' element={ <Home filterDisplayed={filterDisplayed}/> } />
-          {/* <Route path='*' element={<Home />} /> */}
+          <Route path='/imagePage/:imageId' element={ <ImagePage /> } />
+          <Route path='*'element={ <FourZeroFour /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
