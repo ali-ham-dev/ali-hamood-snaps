@@ -5,7 +5,9 @@ import Gallery from '../../components/Gallery/Gallery';
 import Tags from '../../components/Tags/Tags';
 import React from 'react';
 
-function Home({filterDisplayed}) {
+function Home({ filterDisplayed, setOnHomePage }) {
+    setOnHomePage(true);
+
     const [filterTags, setFilterTags] = useState([]);
     const updateFilterTags = (tag) => {
         if (filterTags.includes(tag))

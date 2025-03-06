@@ -1,7 +1,9 @@
 import React from 'react';
 import './FourZeroFour.scss';
 
-function FourZeroFour() {
+function FourZeroFour({ setOnHomePage }) {
+    setOnHomePage(false);
+    
     return (
         <main className="four-zero-four">
             <div className="four-zero-four__container">

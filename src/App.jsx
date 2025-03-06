@@ -1,7 +1,7 @@
 import './App.scss';
 import React from 'react';
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import ImagePage from './pages/ImagePage/ImagePage';
@@ -11,13 +11,8 @@ import Footer from './components/Footer/Footer';
 function App() {
   const [filterDisplayed, setFilterDisplayed] = useState(false);
   const [onHomePage, setOnHomePage] = useState(true);
-  // const location = useLocation();
 
-  // useEffect( () => {
-  //   setOnHomePage(location.pathname === '/');
-  // }, [location] );
-
-  const updateFilterDisplayed = (filterDisplayed)=>{
+  const updateFilterDisplayed = (filterDisplayed) => { 
     setFilterDisplayed(filterDisplayed);
   };
 
@@ -28,9 +23,9 @@ function App() {
           updateFilterDisplayed={updateFilterDisplayed}
           onHomePage={onHomePage}/>
         <Routes>
-          <Route path='/' element={ <Home filterDisplayed={filterDisplayed}/> } />
-          <Route path='/imagePage/:imageId' element={ <ImagePage /> } />
-          <Route path='*' element={ <FourZeroFour /> } />
+          <Route path='/' element={ <Home filterDisplayed={filterDisplayed} setOnHomePage={setOnHomePage}/> } />
+          <Route path='/imagePage/:imageId' element={ <ImagePage setOnHomePage={setOnHomePage}/> } />
+          <Route path='*' element={ <FourZeroFour setOnHomePage={setOnHomePage}/> } />
         </Routes>
         <Footer />
       </BrowserRouter>
