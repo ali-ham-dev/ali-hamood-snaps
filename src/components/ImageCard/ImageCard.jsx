@@ -13,7 +13,7 @@ function ImageCard(props) {
 
     return (
         <div className={`image-card ${ filterDisplayed }`}>
-            <NavLink to={`imagePage/:${imageAltText}`}>
+            <NavLink to={`imagePage/${imageAltText}`}>
                 <div className="image-card__image-container">
                     <img src={imageSrc} alt={imageAltText} className="image-card__image" />
                     <span className="image-card__image-author">{author}</span>
