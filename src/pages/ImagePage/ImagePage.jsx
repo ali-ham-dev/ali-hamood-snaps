@@ -2,7 +2,9 @@ import React from 'react';
 import './ImagePage.scss';
 import { useParams } from 'react-router-dom';
 
-function ImagePage() {
+function ImagePage({ setOnHomePage }) {
+    setOnHomePage(false);
+
     const params = useParams();
 
     return (
