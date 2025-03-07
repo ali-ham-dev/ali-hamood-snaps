@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './Gallery.scss';
 import ImageCard from '../ImageCard/ImageCard.jsx';
-// import images from '../../data/photos.json';
 import axios from 'axios';
 import apiData from '../../data/apiData.json';
 import { v4 as uuidv4 } from 'uuid';
@@ -53,6 +52,7 @@ function Gallery({filterDisplayed, filterTags}) {
                         author={image.photographer}
                         tags={image.tags}
                         key={ image.id }
+                        imageId={image.id}
                         filterDisplayed={filterDisplayed}/>
                     );
                 })
