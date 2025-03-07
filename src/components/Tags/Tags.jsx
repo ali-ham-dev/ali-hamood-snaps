@@ -1,10 +1,27 @@
-import tags from '../../data/tags.json';
+import React from 'react';
 import './Tags.scss';
 import Tag from '../Tag/Tag';
-import { v4 as uuidv4 } from 'uuid';
-import React from 'react';
+import apiData from '../../data/apiData.json';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function Tags({filterDisplayed, updateFilterTags}) {
+    const [tags, setTags] = useState([]);
+    useEffect(() => {
+        const getTags = async () => {
+            try {
+                const response = await axios.get(`
+                    ${apiData.api_url}tags/${apiData.api_key}`);
+                
+                setTags(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        getTags();
+    }, []);
+
     return (
         <section className={`tags ${filterDisplayed?'':'tags--display'}`}>
             <h2 className="tags__title">Filters</h2>
