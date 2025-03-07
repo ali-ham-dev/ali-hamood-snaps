@@ -1,8 +1,11 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './FourZeroFour.scss';
 
 function FourZeroFour({ setOnHomePage }) {
-    setOnHomePage(false);
+    useEffect(() => {
+        setOnHomePage(false);
+    }, []);
     
     return (
         <main className="four-zero-four">

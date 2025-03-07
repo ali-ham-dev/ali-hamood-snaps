@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Home.scss';
 import Hero from '../../components/Hero/Hero';
 import Gallery from '../../components/Gallery/Gallery';
@@ -6,7 +6,9 @@ import Tags from '../../components/Tags/Tags';
 import React from 'react';
 
 function Home({ filterDisplayed, setOnHomePage }) {
-    setOnHomePage(true);
+    useEffect(() => {
+        setOnHomePage(true);
+    }, []);
 
     const [filterTags, setFilterTags] = useState([]);
     const updateFilterTags = (tag) => {
