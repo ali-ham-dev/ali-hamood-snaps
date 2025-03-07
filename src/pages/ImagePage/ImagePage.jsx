@@ -1,9 +1,12 @@
 import React from 'react';
+import { useEffect } from 'react';
 import './ImagePage.scss';
 import { useParams } from 'react-router-dom';
 
 function ImagePage({ setOnHomePage }) {
-    setOnHomePage(false);
+    useEffect(() => {
+        setOnHomePage(false);
+    }, []);
 
     const params = useParams();
 
