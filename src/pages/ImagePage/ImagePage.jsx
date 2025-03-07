@@ -34,11 +34,7 @@ function ImagePage({ setOnHomePage }) {
     return (
         <main className="image-page">
             <div className="image-page__container">
-                <LargeImageCard 
-                    imageSrc={image.photo} 
-                    imageAltText={image.photoDescription} 
-                    author={image.photographer} 
-                    tags={image.tags} />
+                <LargeImageCard image={image} />
                 <CommentForm />
             </div>
         </main>
