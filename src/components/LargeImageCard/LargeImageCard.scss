@@ -1,0 +1,38 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.image-card {
+    border: 1px solid $sea-green;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 2rem;
+
+    @include table-and-desktop {
+        border-radius: 0.75rem;
+    }
+
+    &__image-container {
+        position: relative;
+        background-color: red;
+        box-sizing: content-box;
+        
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__tags {
+        background-color: $sage;
+        padding: 0.5rem;
+
+        @include table-and-desktop {
+            padding: 1rem;
+        }
+    }
+}

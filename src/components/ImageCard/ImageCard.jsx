@@ -5,7 +5,7 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 function ImageCard(props) {  
-    const imageSrc = props.imageSrc ?? '';
+    const imageSrc = props.imageSrc ?? null;
     const imageAltText = props.imageAltText ?? '';
     const author = props.author ?? 'Unknown';
     const tags = props.tags ?? [];
