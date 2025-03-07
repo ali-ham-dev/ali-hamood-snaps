@@ -33,7 +33,7 @@ function ImagePage({ setOnHomePage }) {
 
     return (
         <main className="image-page">
-            <div className="">
+            <div className="image-page__container">
                 <LargeImageCard 
                     imageSrc={image.photo} 
                     imageAltText={image.photoDescription} 

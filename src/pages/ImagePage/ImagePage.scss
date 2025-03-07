@@ -5,5 +5,14 @@
     background-color: $pistachio;
     box-sizing: border-box;
     overflow: hidden;
-    @include site-left-right-padding;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        @include site-left-right-padding;
+
+        @include desktop {
+            width: 60%;
+        }
+    }
 }
