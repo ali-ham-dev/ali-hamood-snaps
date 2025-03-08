@@ -48,12 +48,12 @@ function Gallery({filterDisplayed, filterTags}) {
 
                     return (
                         <ImageCard imageSrc={image.photo} 
-                        imageAltText={image.photoDescription}
-                        author={image.photographer}
-                        tags={image.tags}
-                        key={ image.id }
-                        imageId={image.id}
-                        filterDisplayed={filterDisplayed}/>
+                            imageAltText={image.photoDescription}
+                            author={image.photographer}
+                            tags={image.tags}
+                            key={ image.id }
+                            imageId={image.id}
+                            filterDisplayed={filterDisplayed}/>
                     );
                 })
             }
