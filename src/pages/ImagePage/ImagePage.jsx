@@ -11,12 +11,11 @@ import Comment from '../../components/Comment/Comment';
 function ImagePage({ setOnHomePage }) {
     const params = useParams();
     const [image, setImage] = useState({});
+    const [comments, setComments] = useState([]);
 
     useEffect(() => {
         setOnHomePage(false);
-    }, []);
 
-    useEffect(() => {
         const getImage = async () => {
             try {
                 const response = await axios.get(`
@@ -28,7 +27,19 @@ function ImagePage({ setOnHomePage }) {
             }
         }
 
+        const getComments = async () => {
+            axios
+                .get(`${apiData.api_url}photos/${params.imageId}/comments/${apiData.api_key}`)
+                .then((response) => {
+                    setComments(response.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+
         getImage();
+        getComments();
     }, []);
 
     return (
@@ -36,6 +47,16 @@ function ImagePage({ setOnHomePage }) {
             <div className="image-page__container">
                 <LargeImageCard image={image} />
                 <CommentForm />
+                <h2 className="image-page__comments-title">
+                    {comments.length} Comment{comments.length === 1 ? '' : 's'}
+                </h2>
+                { 
+                    comments.map((comment) => {
+                        return (
+                            <Comment comment={comment} key={comment.id} />
+                        ) 
+                    })
+                }
             </div>
         </main>
     );

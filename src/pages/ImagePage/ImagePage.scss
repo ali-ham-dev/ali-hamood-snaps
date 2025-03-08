@@ -12,7 +12,15 @@
         @include site-left-right-padding;
 
         @include desktop {
-            width: 60%;
+            width: 50%;
+        }
+    }
+
+    &__comments-title {
+        @include heading-mobile("outfit");
+
+        @include table-and-desktop {
+            @include heading("outfit");
         }
     }
 }
