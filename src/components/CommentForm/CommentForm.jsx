@@ -1,11 +1,24 @@
 import React from 'react';
 import './CommentForm.scss';
 import { useState, useRef } from 'react';
+import axios from 'axios';
+import apiData from '../../data/apiData.json';
 
-function CommentForm() {
+function CommentForm({ comments, setComments, photoId}) {
     const [nameIsValid, setNameIsValid] = useState(true);
     const [commentIsValid, setCommentIsValid] = useState(true);
     const formRef = useRef();
+
+    const postComment = (comment) => {
+        try {
+            axios.post(`${apiData.api_url}/photo/${photoId}/comments/${apiData.api_key}`, 
+                comment);
+            
+            setComments([...comments, comment]);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     const handelSubmit = (e) => {
         e.preventDefault();
@@ -31,8 +44,14 @@ function CommentForm() {
             return;
         }
 
-        console.log(name);
-        console.log(comment);
+        const newComment = {
+            name: name,
+            comment: comment,
+            timestamp: Date.now()
+        }
+
+        postComment(newComment);
+        formRef.current.reset();
     }
 
     return (

@@ -46,12 +46,14 @@ function ImagePage({ setOnHomePage }) {
         <main className="image-page">
             <div className="image-page__container">
                 <LargeImageCard image={image} />
-                <CommentForm />
+                <CommentForm comments={comments} setComments={setComments} />
                 <h2 className="image-page__comments-title">
                     {comments.length} Comment{comments.length === 1 ? '' : 's'}
                 </h2>
                 { 
-                    comments.map((comment) => {
+                    comments
+                        .sort((a, b) => b.timestamp - a.timestamp)
+                        .map((comment) => {
                         return (
                             <Comment comment={comment} key={comment.id} />
                         ) 
