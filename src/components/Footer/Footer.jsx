@@ -50,7 +50,7 @@ function Footer() {
                         {
                             contentLinks.map((link) => {
                                 return (
-                                    <NavLink key={uuidv4()} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                    <NavLink key={uuidv4()} className="footer__link" to={'/'}>{link.text}</NavLink>
                                 )
                             })
                         }
@@ -59,7 +59,7 @@ function Footer() {
                         {
                             corpLinks.map((link) => {
                                 return (
-                                    <NavLink key={uuidv4()} className="footer__link" to={`/${link.link}`}>{link.text}</NavLink>
+                                    <NavLink key={uuidv4()} className="footer__link" to={'/'}>{link.text}</NavLink>
                                 )
                             })
                         }
