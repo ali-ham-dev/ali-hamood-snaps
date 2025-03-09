@@ -9,13 +9,13 @@ function Comment({ comment }) {
     }
 
     const date = new Date(comment.timestamp).toLocaleDateString('en', dateFormat);
-    const seoDateTime = new Date(comment.timestamp).toISOString();
 
     return (
         <article className="comment">
             <div className="comment__comment-header">
                 <strong className="comment__user-name">{comment.name}</strong>
-                <time dateTime={seoDateTime} className="comment__date">{date}</time>
+                <time dateTime={new Date(comment.timestamp)} 
+                    className="comment__date">{date}</time>
             </div>
             <p className="comment__comment">
                 {comment.comment}
