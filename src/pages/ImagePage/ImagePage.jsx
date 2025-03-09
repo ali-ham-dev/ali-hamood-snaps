@@ -46,7 +46,9 @@ function ImagePage({ setOnHomePage }) {
         <main className="image-page">
             <div className="image-page__container">
                 <LargeImageCard image={image} />
-                <CommentForm comments={comments} setComments={setComments} />
+                <CommentForm comments={comments} 
+                    setComments={setComments} 
+                    photoId={params.imageId}/>
                 <h2 className="image-page__comments-title">
                     {comments.length} Comment{comments.length === 1 ? '' : 's'}
                 </h2>

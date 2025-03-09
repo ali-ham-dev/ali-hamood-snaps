@@ -15,7 +15,7 @@ function Comment({ comment }) {
         <article className="comment">
             <div className="comment__comment-header">
                 <strong className="comment__user-name">{comment.name}</strong>
-                <time datetime={seoDateTime} className="comment__date">{date}</time>
+                <time dateTime={seoDateTime} className="comment__date">{date}</time>
             </div>
             <p className="comment__comment">
                 {comment.comment}
