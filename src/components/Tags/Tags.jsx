@@ -32,11 +32,17 @@ function Tags({filterDisplayed, updateFilterTags}) {
     const handelTagClickState = (tagText) => {
         const copyTagClickState = {...tagClickState};
 
+        let currentSetTrue = '';
         for (let key in copyTagClickState) {
+            if (copyTagClickState[key])
+                currentSetTrue = key;
+
             copyTagClickState[key] = false;
         }
         
-        copyTagClickState[tagText] = !copyTagClickState[tagText];
+        if (currentSetTrue !== tagText)
+            copyTagClickState[tagText] = !copyTagClickState[tagText];
+        
         setTagClickState({...copyTagClickState});
     }
 

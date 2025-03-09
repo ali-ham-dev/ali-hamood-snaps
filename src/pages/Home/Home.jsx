@@ -12,7 +12,10 @@ function Home({ filterDisplayed, setOnHomePage }) {
 
     const [filterTags, setFilterTags] = useState([]);
     const updateFilterTags = (tag) => {
-        setFilterTags(tag);
+        if (!filterTags.includes(tag)) 
+            setFilterTags(tag);
+        else 
+            setFilterTags([]);
     };
 
     return (
