@@ -16,9 +16,7 @@
 
     &__image-container {
         position: relative;
-        background-color: red;
         box-sizing: content-box;
-        
     }
 
     &__image {
@@ -27,10 +25,11 @@
         height: auto;
     }
 
+    
     &__tags {
         background-color: $sage;
         padding: 0.5rem;
-
+        
         @include table-and-desktop {
             padding: 1rem;
         }

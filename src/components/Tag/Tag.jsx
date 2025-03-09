@@ -6,13 +6,13 @@ function Tag(props) {
     const clickableClass = props.clickable ? 'tag--clickable' : '';
     const marginRight = props.marginRight ? 'tag--margin-right' : '';
     const marginBottom = props.marginBottom ? 'tag--margin-bottom' : '';
+    const clicked = props.tagClickState ? props.tagClickState[props.text] : false;
 
-    const [clicked, setClicked] = useState(false);
     const handelTagClick = (event)=>{
         if (!clickableClass && !props.updateFilterTags)
             return;
 
-        setClicked(!clicked);
+        props.handelTagClickState(event.target.innerText);
         props.updateFilterTags(event.target.innerText);
     }
 

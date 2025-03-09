@@ -28,9 +28,17 @@
         }
     }
 
+    &__icon {
+        fill: $forest-green;
+    }
+
     &--hover {
         color: $white;
         background-color: $forest-green;
+    }
+
+    &--icon-hover {
+        fill: $white;
     }
 
     &--hide {
