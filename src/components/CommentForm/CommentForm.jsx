@@ -11,8 +11,13 @@ function CommentForm({ comments, setComments, photoId}) {
 
     const postComment = (comment) => {
         try {
+            const apiComment = {
+                name: comment.name,
+                comment: comment.comment
+            }
+
             axios.post(`${apiData.api_url}photos/${photoId}/comments/${apiData.api_key}`, 
-                comment);
+                apiComment);
             
             setComments([...comments, comment]);
         } catch (error) {
@@ -46,7 +51,8 @@ function CommentForm({ comments, setComments, photoId}) {
 
         const newComment = {
             name: name,
-            comment: comment
+            comment: comment,
+            timestamp: Date.now()
         }
 
         postComment(newComment);
