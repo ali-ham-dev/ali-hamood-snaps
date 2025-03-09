@@ -4,9 +4,9 @@
 
 .hero {
     background-color: $pistachio;
-    @include site-left-right-padding;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    @include site-left-right-padding;
 
     @include table-and-desktop {
         padding-top: 3rem;
@@ -14,13 +14,13 @@
     }
 
     &__title {
-        @include body-copy-mobile("outfit-light", 300);
         display: flex;
         margin-bottom: 1rem;
+        @include body-copy-mobile("outfit-light", 300);
 
         @include table-and-desktop {
-            @include body-copy("outfit-light", 300);
             margin-bottom: 2rem;
+            @include body-copy("outfit-light", 300);
         }
     }
 

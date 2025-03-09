@@ -1,10 +1,51 @@
-import tags from '../../data/tags.json';
+import React from 'react';
 import './Tags.scss';
 import Tag from '../Tag/Tag';
-import { v4 as uuidv4 } from 'uuid';
-import React from 'react';
+import apiData from '../../data/apiData.json';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 function Tags({filterDisplayed, updateFilterTags}) {
+    const [tags, setTags] = useState([]);
+    const [tagClickState, setTagClickState] = useState({});
+
+    useEffect(() => {
+        const getTags = async () => {
+            try {
+                const response = await axios.get(`
+                    ${apiData.api_url}tags/${apiData.api_key}`);
+                
+                setTags(response.data);
+                
+                response.data.forEach( (tag) => {
+                    tagClickState[tag] = false;
+                });
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        getTags();
+    }, []);
+
+    const handelTagClickState = (tagText) => {
+        const copyTagClickState = {...tagClickState};
+
+        let currentSetTrue = '';
+        for (let key in copyTagClickState) {
+            if (copyTagClickState[key])
+                currentSetTrue = key;
+
+            copyTagClickState[key] = false;
+        }
+        
+        if (currentSetTrue !== tagText)
+            copyTagClickState[tagText] = !copyTagClickState[tagText];
+        
+        setTagClickState({...copyTagClickState});
+    }
+
     return (
         <section className={`tags ${filterDisplayed?'':'tags--display'}`}>
             <h2 className="tags__title">Filters</h2>
@@ -17,7 +58,9 @@ function Tags({filterDisplayed, updateFilterTags}) {
                             marginRight={ true }
                             marginBottom={ true }
                             key={ tag }
-                            updateFilterTags={ updateFilterTags }/>);
+                            updateFilterTags={ updateFilterTags }
+                            tagClickState={ tagClickState }
+                            handelTagClickState={ handelTagClickState }/>);
                     })
                 }
             </div>

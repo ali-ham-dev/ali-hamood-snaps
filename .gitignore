@@ -25,7 +25,3 @@ dist-ssr
 
 # Packages and scaffolding. 
 /node_modules
-vite.config.js
-*.css
-eslint.config.js
-*.map

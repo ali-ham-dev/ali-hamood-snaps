@@ -28,7 +28,7 @@ function ServiceTerms() {
             {
                 serviceLinks.map((link) => {
                     return (
-                        <Link className="service-terms__link" to={`/${link.link}`} key={uuidv4()}>{link.text}</Link>
+                        <Link className="service-terms__link" to={'/'} key={uuidv4()}>{link.text}</Link>
                     )
                 })
             }

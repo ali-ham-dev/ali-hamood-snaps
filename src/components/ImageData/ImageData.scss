@@ -1,0 +1,69 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.image-data {
+    background-color: $sage;
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+
+    @include table-and-desktop {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    &__like-button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        padding-right: 0.5rem;
+    }
+
+    &__like-count {
+        @include label-mobile("outfit");
+
+        @include table-and-desktop {
+            @include label("outfit");
+        }
+    }
+
+    &__likes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__author-desktop-tablet {
+        display: none;
+
+        @include table-and-desktop {
+            display: block;
+            @include label("outfit");
+        }
+    }
+
+    &__date {
+        @include label-mobile("outfit");
+
+        @include table-and-desktop {
+            @include label("outfit");
+        }
+    }
+
+    &__desktop-display {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__author {
+        display: block;
+        padding-top: 0.5rem;
+        @include label-mobile("outfit");
+
+        @include table-and-desktop {
+            display: none;
+        }
+    }
+}

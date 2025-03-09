@@ -3,9 +3,9 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .footer {
-    @include site-left-right-padding;
     background-color: $pistachio;
     padding-bottom: 2rem;
+    @include site-left-right-padding;
 
     &__container {
         display: flex;
@@ -43,14 +43,14 @@
     }
 
     &__link {
-        @include body-copy-mobile("outfit");
         display: flex;
         flex-direction: column;
         margin-bottom: 0.5rem;
+        @include body-copy-mobile("outfit");
 
         @include table-and-desktop {
-            @include body-copy("outfit");
             margin-bottom: 1rem;
+            @include body-copy("outfit");
         }
     }
 

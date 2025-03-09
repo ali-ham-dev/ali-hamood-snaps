@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import './Filter.scss';
-import FilterSvg from '../../assets/icons/Filter.svg';
-import FilterSvgHover from '../../assets/icons/FilterHover.svg';
+import FilterSvg from '../../assets/icons/Filter.svg?react';
 import React from 'react';
 
-function Filter({filterDisplayed, updateFilterDisplayed}) {
-    const [filterIcon, setFilterIcon] = useState(FilterSvg);
+function Filter({filterDisplayed, updateFilterDisplayed, onHomePage}) {
     const [filterHover, setFilterHover] = useState(false);
     
     const filterClick = ()=>{
@@ -15,24 +13,23 @@ function Filter({filterDisplayed, updateFilterDisplayed}) {
     const filterMouseEnter = ()=>{
         if (!filterDisplayed) {
             setFilterHover(true);
-            setFilterIcon(FilterSvgHover);
         }
     }
 
     const filterMouseLeave = ()=>{
         if (!filterDisplayed) {
             setFilterHover(false);
-            setFilterIcon(FilterSvg);
         }
     }
 
     return (
-        <button className={ `filter ${filterHover ? "filter--hover" : ""}` }
+        <button className={ `filter ${filterHover ? "filter--hover" : ""}
+                ${onHomePage ? "" : "filter--hide"}` }
             onMouseEnter={ filterMouseEnter }
             onMouseLeave={ filterMouseLeave }
             onClick={ filterClick }>
             <label className="filter__text">Filters</label>
-            <img className="filter__icon" src={ filterIcon } alt="Filter icon."></img>
+            <FilterSvg className={`filter__icon ${filterHover ? "filter--icon-hover" : ""}`} />
         </button>
     );
 }

@@ -1,0 +1,28 @@
+@use "../../styles/partials/global.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.return-home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    border: none;
+    background: transparent;
+    width: 6rem;
+
+    &__icon {
+        background-color: none;
+    }
+
+    &__text {
+        background-color: none;
+        color: $forest-green;
+        @include body-copy("outfit");
+    }
+
+    &--hide {
+        display: none;
+    }
+}

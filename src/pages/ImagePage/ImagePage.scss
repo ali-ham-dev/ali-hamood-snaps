@@ -1,0 +1,26 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.image-page {
+    background-color: $pistachio;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        @include site-left-right-padding;
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    &__comments-title {
+        @include heading-mobile("outfit");
+
+        @include table-and-desktop {
+            @include heading("outfit");
+        }
+    }
+}

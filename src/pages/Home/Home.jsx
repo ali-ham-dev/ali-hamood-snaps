@@ -1,17 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Home.scss';
-import Hero from '../Hero/Hero';
-import Gallery from '../Gallery/Gallery';
-import Tags from '../Tags/Tags';
+import Hero from '../../components/Hero/Hero';
+import Gallery from '../../components/Gallery/Gallery';
+import Tags from '../../components/Tags/Tags';
 import React from 'react';
 
-function Home({filterDisplayed}) {
+function Home({ filterDisplayed, setOnHomePage }) {
+    useEffect(() => {
+        setOnHomePage(true);
+    }, []);
+
     const [filterTags, setFilterTags] = useState([]);
     const updateFilterTags = (tag) => {
-        if (filterTags.includes(tag))
-            setFilterTags(filterTags.filter(t => t !== tag));
-        else
-            setFilterTags([...filterTags, tag]);
+        if (!filterTags.includes(tag)) 
+            setFilterTags(tag);
+        else 
+            setFilterTags([]);
     };
 
     return (

@@ -2,15 +2,14 @@
 @use "../../styles/partials/variables.scss" as *;
 
 .tags {
-    @include site-left-right-padding;
     background-color: $sage;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    @include site-left-right-padding;
 
     @include table {
         padding-bottom: 4rem;
     }
-
 
     @include table-and-desktop {
         padding-top: 2rem;
@@ -26,13 +25,13 @@
     }
 
     &__title {
+        margin-bottom: 1rem;
         @include heading-mobile("outfit");
         @include no-margin-padding;
-        margin-bottom: 1rem;
         
         @include table-and-desktop {
-            @include heading("outfit");
             margin-bottom: 2rem;
+            @include heading("outfit");
         }
     }
 

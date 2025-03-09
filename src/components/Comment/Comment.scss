@@ -1,0 +1,40 @@
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/variables.scss" as *;
+
+.comment {
+    border-top: 1px solid $sea-green;
+    padding-top: 1rem;
+
+    &__comment-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__user-name {
+        color: $forest-green;
+        @include label-mobile("outfit");
+
+        @include table-and-desktop {
+            @include label("outfit");
+        }
+    }
+    
+    &__date {
+        color: $forest-green;
+        @include label-mobile("outfit");
+
+        @include table-and-desktop {
+            @include label("outfit");
+        }
+    }
+
+    &__comment {
+        @include body-copy-mobile("outfit");
+
+        @include table-and-desktop {
+            @include body-copy("outfit");
+        }
+    }
+}
