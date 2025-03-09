@@ -7,6 +7,7 @@ import axios from 'axios';
 import LargeImageCard from '../../components/LargeImageCard/LargeImageCard';
 import CommentForm from '../../components/CommentForm/CommentForm';
 import Comment from '../../components/Comment/Comment';
+import { v4 as uuidv4 } from 'uuid';   
 
 function ImagePage({ setOnHomePage }) {
     const params = useParams();
@@ -57,7 +58,7 @@ function ImagePage({ setOnHomePage }) {
                         .sort((a, b) => b.timestamp - a.timestamp)
                         .map((comment) => {
                         return (
-                            <Comment comment={comment} key={comment.id} />
+                            <Comment comment={comment} key={comment.id ? comment.id : uuidv4()} />
                         ) 
                     })
                 }
