@@ -1,4 +1,3 @@
-import React from 'react';
 import './ReturnHome.scss';
 import Arrow from '../../assets/icons/Arrow.svg';
 import { useNavigate} from 'react-router-dom';

@@ -1,4 +1,3 @@
-import React from 'react';
 import './CommentForm.scss';
 import { useState, useRef } from 'react';
 import axios from 'axios';

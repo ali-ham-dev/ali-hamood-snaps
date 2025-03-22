@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './Filter.scss';
 import FilterSvg from '../../assets/icons/Filter.svg?react';
-import React from 'react';
 
 function Filter({filterDisplayed, updateFilterDisplayed, onHomePage}) {
     const [filterHover, setFilterHover] = useState(false);

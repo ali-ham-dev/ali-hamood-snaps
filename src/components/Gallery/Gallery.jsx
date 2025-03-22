@@ -1,11 +1,8 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import './Gallery.scss';
 import ImageCard from '../ImageCard/ImageCard.jsx';
 import axios from 'axios';
 import apiData from '../../data/apiData.json';
-import { v4 as uuidv4 } from 'uuid';
-
 
 const renderImageCard = (filterTags, image) => {
     if (filterTags.length === 0)

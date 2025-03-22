@@ -1,4 +1,3 @@
-import React from 'react';
 import './Tags.scss';
 import Tag from '../Tag/Tag';
 import apiData from '../../data/apiData.json';

@@ -1,4 +1,3 @@
-import React from 'react';
 import './LargeImageCard.scss';
 import Tag from '../Tag/Tag.jsx';
 import { v4 as uuidV4 }from 'uuid';

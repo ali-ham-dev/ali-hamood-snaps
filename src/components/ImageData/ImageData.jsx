@@ -1,9 +1,5 @@
-import React from 'react';
 import './ImageData.scss';
-import { useState, useEffect } from 'react';
-import apiData from '../../data/apiData.json';
 import LikeIcon from '../../assets/icons/Like_Outline.svg';
-import axios from 'axios';
 
 function ImageData({ image }) {
     const likes = image.likes ?? 0;

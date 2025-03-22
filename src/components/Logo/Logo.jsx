@@ -1,6 +1,5 @@
 import './Logo.scss';
 import { NavLink } from 'react-router-dom';
-import React from 'react';
 
 function Logo(props) {
     const propClassName = props.className ? props.className : '';

@@ -1,8 +1,7 @@
 import './ImageCard.scss';
 import Tag from '../Tag/Tag.jsx';
 import { v4 as uuidV4 }from 'uuid';
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function ImageCard(props) {  
     const imageSrc = props.imageSrc ?? null;

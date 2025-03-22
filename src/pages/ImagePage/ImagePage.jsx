@@ -1,4 +1,3 @@
-import React from 'react';
 import './ImagePage.scss';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
