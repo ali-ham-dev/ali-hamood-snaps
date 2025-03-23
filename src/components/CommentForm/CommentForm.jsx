@@ -24,7 +24,7 @@ function CommentForm({ comments, setComments, photoId}) {
         }
     }
 
-    const handelSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         const name = formRef.current.name.value;
@@ -73,7 +73,7 @@ function CommentForm({ comments, setComments, photoId}) {
                 id="comment"/>
             <button type="button" 
                 className="comment-form__button"
-                onClick={handelSubmit}>Submit</button>
+                onClick={handleSubmit}>Submit</button>
         </form>
     )
 }
